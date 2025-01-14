@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # This name will help us to identify ther service easier and see how it interacts with other resources within the cluster.
+  name: my-service0
+
+spec:
+  selector:
+    app: app-1
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # This name will help us to identify ther service easier and see how it interacts with other resources within the cluster.
+  name: my-service1
+
+spec:
+  selector:
+    app: app-2
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # This name will help us to identify ther service easier and see how it interacts with other resources within the cluster.
+  name: my-service2
+
+spec:
+  selector:
+    app: app-3
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
